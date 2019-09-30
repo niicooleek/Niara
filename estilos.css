@@ -18,9 +18,10 @@ header h1{
 }
 
 .video{
+    display: flex;
     width: 640px;
-    height: 300px;
-    margin: auto;
+    height: 360px;
+    margin: 22%;
     background-color: red;
     align-content: center;
     text-align: center;
