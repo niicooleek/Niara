@@ -12,13 +12,19 @@ function onYouTubeIframeAPIReady() {
         height: '360',
         width: '640',
         videoId: 'M7lc1UVf-VE',
-        playersVars: { 'autoplay': 0 },
+        playersVars: { 'autoplay': 5 },
         events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
         }
     });
 }
+function onPlayerReady(event){
+       //event.target.playVideo();
+    }
+    function onPlayerStateChange(){
+       
+    }
 
 var isPlay = false;
 window.addEventListener('scroll', function () {
@@ -30,13 +36,13 @@ window.addEventListener('scroll', function () {
     var windowh = window.innerHeight;
 
     if (posvideo + alturavideo < currentScroll + windowh && posvideo > currentScroll) {
-        if (isPlay) {
+        if (!isPlay) {
             player.playVideo();
-            isPlay = false;
+            isPlay = true;
         }
     } else {
         if (isPlay) {
-            player.pauseVideo();
+            player.pauseVideo;
             isPlay = false;
         }
     }
